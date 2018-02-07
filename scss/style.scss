@@ -1,0 +1,113 @@
+@import "reset.scss";
+@import "variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-color;
+  position: relative;
+  height: 100vh;
+}
+
+#app {
+  width: 360px;
+  background-color: $light-color;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 0.6rem;
+  border-top: 5px solid $main-color;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  p:first-child {
+    margin-bottom: 1rem;
+    color: $main-color;
+  }
+  p:nth-child(2) {
+    color: grey;
+    font-style: italic;
+    margin-bottom: 2rem;
+    line-height: 1.4rem;
+  }
+  ul {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1rem;
+    li {
+      padding: 0.9rem 0.5rem;
+      border-bottom: 1px dashed #b5b5b7;
+      transition: all .3s ease;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 1rem;
+      &:hover {
+        background-color: $item-hover-color;
+        padding-left: 1.1rem;
+      }
+      &:first-child {
+         border-top: 1px dashed #b5b5b7;
+      }
+      span {
+         color: $main-color;
+         cursor: pointer;
+         i {
+            margin-left: .7rem;
+         }
+         .edit-hover {
+            color: red;
+         }
+      }
+      .item-para {
+         color: black;
+         margin: 0;
+         max-width: 70%;
+      }
+      .editable {
+         outline: none;
+      }
+      .deactivate {
+         color: $deactivate-color;
+      }
+      .overline {
+         text-decoration: line-through;
+      }
+    }
+  }
+  .form-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    input {
+      width: 70%;
+      height: 26px;
+      padding: .2rem .4rem;
+      border: none;
+      border-left: 2px solid $main-color;
+      border-top: 2px solid $main-color;
+      border-bottom: 2px solid $main-color;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      outline: none;
+    }
+    button {
+      width: 30%;
+      padding: .3rem .4rem;
+      height: 26px;
+      background-color: $main-color;
+      border: none;
+      border-right: 2px solid $main-color;
+      border-top: 2px solid $main-color;
+      border-bottom: 2px solid $main-color;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      outline: none;
+      color: $light-color;
+      font-size: 0.7rem;
+      cursor: pointer;
+    }
+  }
+}
